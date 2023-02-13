@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Amount</span>
+<input type="text" id="tt" value="">
+<span>From Currency</span>
+<select>
+     <option id="VN">Viet Nam</option>
+    <option  id="USA">USA</option>
+</select>
+<span> To  Currency</span>
+  <select>
+       <option id="my">USA</option>
+      <option   id="VietNam">VietNam</option>
+  </select>
+<p></p>
+<input type="text" id="cv" value="" /><button onclick="chuyenDoi()">Convernt</button>
+<script>
+        function chuyenDoi(){
+            let v = document.getElementById("tt").value;
+            let f = 23000;
+            let kq = v / f ;
+            document.getElementById("cv").value = kq;
+
+
+
+
+
+        }
+</script>
+
+
+
+
+</body>
+</html>

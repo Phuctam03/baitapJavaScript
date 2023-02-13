@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        let bkt, tgk,tck;
+        bkt = parseInt(prompt("nhap vao bkt :"));
+        tgk = parseInt(prompt("nhap vao tgk :"));
+        tck = parseInt(prompt("nhap vao tck :"));
+
+
+        let tongdiem = (bkt +tgk + tck) / 3 ;
+
+         if( tongdiem >= 9 ){
+             alert("xep loai gioi");
+         }else if (tongdiem <= 8) {
+             alert("xep loai Kha");
+         }else if( tongdiem <= 6.5){
+             alert("xep loai trung Binh");
+         }else if(tongdiem < 5 ){
+              alert("xep loai yeu ");
+         }
+
+
+</script>
+
+</body>
+</html>

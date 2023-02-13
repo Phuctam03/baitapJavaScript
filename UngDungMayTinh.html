@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào số đầu tiên :</p>
+<input type="text" id="sm" value="" />
+<p>Nhập vào số thứ hai :</p>
+<input type="text" id="sh" value="" />
+<p>Kết quả</p>
+<input type="text" id="kq" value="" />
+<p></p>
+<button onclick="add()" >Add(+)</button>
+<button onclick="sub()" id="tru" value="t">sub(-)</button>
+<button onclick="mul()" id="nhan" value="n">mul(*)</button>
+<button onclick="div()" id="chia" value="ct">div(/)</button>
+<script>
+    function add(){
+        let soDautien = parseInt(document.getElementById("sm").value);// chuyển String thành Int;
+        let soThuHai = parseInt(document.getElementById("sh").value); // chuyển String thành Int;
+
+        let cong = soDautien + soThuHai;
+
+
+        document.getElementById("kq").value = cong;
+    }
+    function sub(){
+        let soDautien = parseInt(document.getElementById("sm").value);// chuyển String thành Int;
+        let soThuHai = parseInt(document.getElementById("sh").value); // chuyển String thành Int;
+
+        let tru = soDautien - soThuHai;
+
+
+        document.getElementById("kq").value = tru ;
+
+    }
+    function mul(){
+        let soDautien = parseInt(document.getElementById("sm").value);// chuyển String thành Int;
+        let soThuHai = parseInt(document.getElementById("sh").value); // chuyển String thành Int;
+
+        let nhan = soDautien * soThuHai;
+
+
+        document.getElementById("kq").value = nhan;
+
+    }
+    function div(){
+        let soDautien = parseInt(document.getElementById("sm").value);// chuyển String thành Int;
+        let soThuHai = parseInt(document.getElementById("sh").value); // chuyển String thành Int;
+
+        let chia = soDautien / soThuHai;
+
+
+        document.getElementById("kq").value = chia;
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

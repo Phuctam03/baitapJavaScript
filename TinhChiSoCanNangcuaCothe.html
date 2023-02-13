@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>weight :</span><input type="text" id="cannang" value="" />
+<span>height :</span><input type="text" id="chieucao" value="" />
+<p></p>
+<button onclick="tinhChiso()">Tinh</button>
+<script>
+
+     function tinhChiso(){
+         let w = document.getElementById("cannang").value;
+         let h = document.getElementById("chieucao").value;
+
+         let bmi = w / (Math.pow(h,2));
+
+         alert("BMi cua co the :"+bmi);
+
+         if(bmi < 18){
+             document.write("underweight");
+         }else if( bmi < 25){
+             document.write("Normal");
+         }else if(bmi < 30){
+             document.write("overweight");
+         }else {
+             document.write("obese");
+         }
+
+     }
+
+
+</script>
+
+
+
+
+</body>
+</html>

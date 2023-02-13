@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienhoaHong = parseInt(prompt("nhap vao so tien hoa hong :"));
+    let  tienThuongThem = 0;
+
+
+       if(tienhoaHong > 400 && tienhoaHong <= 600){
+           tienThuongThem = tienhoaHong * 0.01 ;
+       }else if ( tienhoaHong > 600 && tienhoaHong < 800){
+           tienThuongThem = tienhoaHong * 0.015;
+       }else if( tienhoaHong >= 800){
+              tienThuongThem = tienhoaHong * 0.2 ;
+       }
+         alert("so tien duoc thuong :"+tienThuongThem);
+
+
+</script>
+
+</body>
+</html>
