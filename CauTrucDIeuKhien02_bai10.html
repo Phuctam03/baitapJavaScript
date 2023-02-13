@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luongDIenNangtieuThu = parseInt(prompt("nhập vào lượng điện năng tiêu thụ/1thang :"));
+    let donGiadien;
+
+        if(donGiadien >= 50 ){
+             donGiadien = 1484;
+        }else if( donGiadien >= 51  && donGiadien <=100){
+             donGiadien = 1533;
+        }else if(donGiadien >101 && donGiadien <=200){
+            donGiadien = 1786;
+        }else if(donGiadien >= 201 && donGiadien <= 300){
+            donGiadien =    2242;
+        }else if(donGiadien >= 301 && donGiadien <=400){
+            donGiadien = 2503;
+        }else {
+            donGiadien =2587;
+        }
+    let tienDIen =  luongDIenNangtieuThu * donGiadien;
+
+        alert("số tiền điện phải trả trong1 tháng là :"+tienDIen);
+
+
+
+</script>
+
+</body>
+</html>

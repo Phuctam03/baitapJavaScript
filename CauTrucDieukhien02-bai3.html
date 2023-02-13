@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span> Cạnh :</span> <input type="text" id="hinhvuong" value="" />
+<input type="text" id="dienTich" value="" /><input type="button" onclick="dienTichHInhVuong()" value="Tính" /></input>
+<script>
+    function dienTichHInhVuong() {
+        let a = document.getElementById("hinhvuong").value;
+
+        let dienTich = a * a;
+
+        document.getElementById("dienTich").value = dienTich;
+    }
+
+</script>
+
+</body>
+</html>

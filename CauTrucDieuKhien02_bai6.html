@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<span>nhập a :</span> <input type="text" id="hesoa" value="" />
+<span>nhập b :</span> <input type="text" id="hesob" value="" />
+<span> kết quả :</span> <input type="text" id="kq" value=""><input type="button" onclick="ptbac1()" value="Kết quả " />
+<body>
+<script>
+        function ptbac1(){
+            let a = document.getElementById("hesoa").value;
+            let b = document.getElementById("hesob").value;
+
+            let s = "phương trình vô  số nghiệm";
+            let s1= "Phương trình vô nghiệm ";
+
+            let x = - b / a ;
+
+            if( a == 0 ){
+                if( b ==0 ){
+                    document.getElementById("kq").value = s ;
+                }else {
+                    document.getElementById("kq").value = s1;
+                }
+            }
+            else{
+                document.getElementById("kq").value = x;
+
+            }
+
+
+
+        }
+
+</script>
+
+
+</body>
+</html>
