@@ -5,31 +5,40 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="nhap" value="" /><br/>
-<input type="button" id="1" value="1" style="height: 40px ; width: 40px"  />
-<input type="button" id="2" value="2"  style="height: 40px ; width: 40px" />
-<input type="button" id="3" value="3"  style="height: 40px ; width: 40px" />
-<input type="button" id="dauCong" value="+"  style="height: 40px ; width: 40px" /><br/>
-<input type="button" id="4" value="4"  style="height: 40px ; width: 40px" />
-<input type="button" id="5" value="5"  style="height: 40px ; width: 40px" />
-<input type="button" id="6" value="6"   style="height: 40px ; width: 40px" />
-<input type="button" id="dauTru" value="-"  style="height: 40px ; width: 40px" /><br/>
-<input type="button" id="7" value="7"  style="height: 40px ; width: 40px" />
-<input type="button" id="8" value="8"   style="height: 40px ; width: 40px" />
-<input type="button" id="9" value="9"    style="height: 40px ; width: 40px"/>
-<input type="button" id="dauNhan" value="x"  style="height: 40px ; width: 40px" /><br/>
-<input type="button" id="C" value="C"  style="height: 40px ; width: 40px" />
-<input type="button" id="0" value="0"   style="height: 40px ; width: 40px" />
-<input type="button" id="=" value="="    style="height: 40px ; width: 40px"/>
-<input type="button" id="dauChia" value="/"  style="height: 40px ; width: 40px" /><br/>
-
+<input type="text" id="nhap" value="0" style="width: 166px ; height: 30px " /><br/>
+<input type="button" id="1" value="1" style="height: 40px ; width: 40px" ; onclick="display('1')" />
+<input type="button" id="2" value="2"  style="height: 40px ; width: 40px" ; onclick="display('2')"/>
+<input type="button" id="3" value="3"  style="height: 40px ; width: 40px" ; onclick="display('3')"  />
+<input type="button" id="dauCong" value="+"  style="height: 40px ; width: 40px"; onclick="display('+')"  /><br/>
+<input type="button" id="4" value="4"  style="height: 40px ; width: 40px" ; onclick="display('4')" />
+<input type="button" id="5" value="5"  style="height: 40px ; width: 40px"  ; onclick="display('5')"/>
+<input type="button" id="6" value="6"   style="height: 40px ; width: 40px" ; onclick="display('6')" />
+<input type="button" id="dauTru" value="-"  style="height: 40px ; width: 40px" ; onclick="display('-')" /><br/>
+<input type="button" id="7" value="7"  style="height: 40px ; width: 40px"  ; onclick="display('7')"/>
+<input type="button" id="8" value="8"   style="height: 40px ; width: 40px"  ; onclick="display('8')" />
+<input type="button" id="9" value="9"    style="height: 40px ; width: 40px"  ; onclick="display('9')" />
+<input type="button" id="dauNhan" value="*"  style="height: 40px ; width: 40px"  ; onclick="display('*')" /><br/>
+<input type="button" id="C" value="C"  style="height: 40px ; width: 40px" ; onclick="clearScreen()" />
+<input type="button" id="0" value="0"   style="height: 40px ; width: 40px" ; onclick="display('0')" />
+<input type="button" id="=" value="="    style="height: 40px ; width: 40px" ; onclick="calculartor()"/>
+<input type="button" id="dauChia" value="/"  style="height: 40px ; width: 40px" ; onclick="display('/')" /><br/>
 <script>
-    function display1(){
-
-
-
+    // làm sạch màn hình ;
+    function clearScreen() {
+        document.getElementById("nhap").value ="";
+    }
+    // hiển thị các nút trên máy tính;
+    function display(value) {
+        document.getElementById("nhap").value += value;
+    }
+    // hàm tính toán
+    function calculartor(){
+        let cacpheptoan = document.getElementById("nhap").value;
+        let tinhtoan = eval(cacpheptoan); // eval tính toán các chuỗi;
+        document.getElementById("nhap").value = tinhtoan;
 
     }
+
 
 
 </script>
