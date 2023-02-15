@@ -8,23 +8,33 @@
 <span>Amount</span>
 <input type="text" id="tt" value="">
 <span>From Currency</span>
-<select>
-     <option id="VN">Viet Nam</option>
-    <option  id="USA">USA</option>
+<select name="" id="sl1">
+     <option value="VND">Viet Nam</option>
+    <option  value="USD">USA</option>
 </select>
 <span> To  Currency</span>
-  <select>
-       <option id="my">USA</option>
-      <option   id="VietNam">VietNam</option>
+  <select name="" id="sl2">
+       <option  value="USD">USA</option>
+      <option   value="VND">VietNam</option>
   </select>
 <p></p>
 <input type="text" id="cv" value="" /><button onclick="chuyenDoi()">Convernt</button>
 <script>
         function chuyenDoi(){
-            let v = document.getElementById("tt").value;
-            let f = 23000;
-            let kq = v / f ;
-            document.getElementById("cv").value = kq;
+            let dauvao = document.getElementById("tt").value;
+            let sl1 = document.getElementById("sl1").value;
+            let sl2 = document.getElementById("sl2").value;
+            let doi;
+
+            if(sl1 == "VND" && sl2 == "USD"){
+                doi = (dauvao /24000);
+                document.getElementById("cv").value = doi;
+            }else if(sl1 == "USD" && sl2 =="VND"){
+                doi = (dauvao*24000);
+                document.getElementById("cv").value = doi;
+            }else if( sl1 == sl2){
+                document.getElementById("cv").value = dauvao;
+            }
 
 
 
